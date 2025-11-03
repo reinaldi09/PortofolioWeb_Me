@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog Post - Building a Powerful Automation Workflow with n8n</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #F7FF00;
+            --secondary-color: #4ADE80;
+            --dark-color: #111827;
+            --light-color: #F9FAFB;
+        }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+        }
+        .neobrutalist-border {
+            border: 2px solid var(--dark-color);
+            box-shadow: 4px 4px 0px var(--dark-color);
+        }
+        .neobrutalist-button {
+            border: 2px solid var(--dark-color);
+            box-shadow: 4px 4px 0px var(--dark-color);
+            transition: all 0.2s ease-in-out;
+        }
+        .neobrutalist-button:hover {
+            box-shadow: 2px 2px 0px var(--dark-color);
+            transform: translate(2px, 2px);
+        }
+        .grid-lines {
+            background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .prose h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+        .prose p {
+            margin-bottom: 1.25em;
+            line-height: 1.7;
+        }
+        .prose img {
+            border: 2px solid var(--dark-color);
+            box-shadow: 4px 4px 0px var(--dark-color);
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+        .prose pre {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 1.5em;
+            border-radius: 0;
+            border: 2px solid var(--dark-color);
+            box-shadow: 4px 4px 0px var(--dark-color);
+            overflow-x: auto;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+        .prose code {
+            font-family: 'Space Mono', monospace;
+        }
+    </style>
+</head>
+<body class="bg-[var(--light-color)] text-[var(--dark-color)]">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 grid-lines">
+<header class="flex justify-between items-center py-6 border-b-2 border-black">
+<h1 class="text-2xl font-bold uppercase">GRAGIH<br/>PROJECTS.</h1>
+<nav class="hidden md:flex items-center space-x-6 font-bold">
+<a class="hover:text-[var(--secondary-color)]" href="#">Home</a>
+<a class="hover:text-[var(--secondary-color)]" href="#">About</a>
+<a class="hover:text-[var(--secondary-color)]" href="#">Services</a>
+<a class="hover:text-[var(--secondary-color)]" href="#">Work</a>
+<a class="bg-[var(--primary-color)] text-black px-6 py-2 neobrutalist-button flex items-center" href="#">
+<span class="mr-2">EN</span>
+<span class="material-symbols-outlined">sync_alt</span>
+<span class="ml-2">ID</span>
+</a>
+</nav>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-4xl">menu</span>
+</button>
+</header>
+<main class="py-16">
+<div class="max-w-4xl mx-auto">
+<div class="mb-8">
+<a class="inline-flex items-center font-bold neobrutalist-button px-4 py-2 bg-white text-black hover:bg-gray-100" href="all_blog.html">
+<span class="material-symbols-outlined mr-2">arrow_back</span> Back to Blog Collection
+                    </a>
+</div>
+<article class="bg-white p-8 sm:p-10 neobrutalist-border">
+<header class="mb-8 border-b-2 border-black pb-8">
+<h2 class="text-4xl md:text-5xl font-bold uppercase tracking-tighter mb-4">Building a Powerful Automation Workflow with n8n</h2>
+<div class="flex items-center text-sm font-bold text-gray-500">
+<span>By Ahmad Reinaldi</span>
+<span class="mx-2">|</span>
+<span>SEPTEMBER 12, 2023</span>
+</div>
+</header>
+<div class="prose max-w-none text-lg">
+<p>In today's fast-paced digital world, automation is no longer a luxury but a necessity. Repetitive tasks can drain our time and energy, pulling focus from what truly matters: innovation and growth. This is where tools like n8n come in. n8n (pronounced "n-eight-n") is an open-source, self-hostable workflow automation tool that lets you connect various applications and services to create powerful, customized workflows.</p>
+<p>This post is a step-by-step guide to creating your first n8n workflow. We'll integrate multiple apps and automate a common business process, showcasing just how much you can boost your productivity.</p>
+<img alt="n8n workflow diagram" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB16ajwV6C3n1xgXpWCQ0ezD5lJ5Do0ysxw-9Bj3gd-HfyCVxQOisgp--EmGeLCBtieRDXa-l2MFSVF0DOFVfU-UiH7L1MlP2WpY-1EBm7M_YMAnL189lZpSvqaTbx76w7MpOo1JvFPjsHG-yP0NY0SHIbfG3zPr3kDsGH70oPrWGlvg_pWMntsYETnXaWm8DfDmeD7gkXO5NT7OpwG61e1wiNRbbHLs244K5XXj00ssrqCo5aH01T2DMBBm0c7qWYsLBgzqJoVBZo"/>
+<h2>Getting Started: Setting Up Your n8n Instance</h2>
+<p>Before we dive into creating a workflow, you need an n8n instance. You can either use n8n.cloud for a managed solution or self-host it on your own server for more control. For this tutorial, we'll assume you have a running instance. The interface is intuitive, with a canvas where you'll build your workflow by connecting nodes.</p>
+<h2>The Core Concept: Nodes and Connections</h2>
+<p>In n8n, everything revolves around nodes. A node is a building block that represents an app integration (like Gmail or a webhook) or a core function (like filtering data or executing custom code). You connect these nodes to pass data from one to another, creating a sequence of actions—your workflow.</p>
+<h2>Example Workflow: Automating a Customer Inquiry</h2>
+<p>Let's build a practical workflow. Imagine a customer submits a form on your website. We want to automatically:
+                            <br/> 1. Add their details to a Google Sheet.
+                            <br/> 2. Send a confirmation email.
+                            <br/> 3. Notify the team on Slack.
+                        </p>
+<pre><code class="language-javascript">// Example: Accessing data from a previous node
+const customerEmail = $json["body"]["email"];
+const customerName = $json["body"]["name"];
+// You can then use these variables in subsequent nodes.
+// For example, in the 'Send Email' node's body:
+// Hello {{ customerName }}, thank you for your inquiry!
+</code></pre>
+<p>The code snippet above shows how you can use JavaScript expressions within n8n to manipulate data. The `$json` object holds the output from the previous node, allowing for dynamic and flexible data handling between your connected services. This feature is incredibly powerful for creating complex, custom logic within your automations.</p>
+<img alt="Screenshot of the n8n interface showing connected nodes" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDM0IF81-uCU6C_XOD4yQUaA7PAG_vZ_xwGJ04EyhjXi1FF01xKtgSDEAJMoCkYRtGNAcga3Ob6Egm7pZdLGMUpUZntWmySeCbYqSrL6Xk4qUrK1x_XlUW8H-IpMfwMudmdvqM5U3VAFMFrUw09yjFgZcfZGeDdnm-7XpLqtWsGDpGf7cxf1HO23_4RtwFTOwmXJuOGZBM_pEBbG31yQJfnFLyxJtROpY1swi3am8z0Mo7OxAcyuIBc1RV50SViIY6Sbqb13Bp8U"/>
+<h2>Conclusion: The Power is in Your Hands</h2>
+<p>We've only scratched the surface of what's possible with n8n. By connecting different apps and services, you can automate almost any digital task imaginable. The key is to start small, identify a repetitive task in your own work, and build a simple workflow to handle it. As you get more comfortable, you can create more complex and powerful automations that save you hours every week. Happy automating!</p>
+</div>
+</article>
+<div class="mt-12 flex justify-center">
+<a class="inline-flex items-center font-bold neobrutalist-button px-6 py-3 bg-[var(--primary-color)] text-black hover:bg-yellow-300" href="all_blog.html">
+<span class="material-symbols-outlined mr-2">arrow_back</span> Back to Blog Collection
+                    </a>
+</div>
+</div>
+</main>
+<footer class="bg-[var(--dark-color)] text-white text-center py-4 mt-8">
+<p class="font-bold">Designed by Ahmad Reinaldi | Copyright © 2025</p>
+</footer>
+</div>
+
+</body></html>
