@@ -1,49 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>All Blog Posts - Gragih Projects</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blog Posts - Ahmad Reinaldi</title>
+    <meta name="description" content="Blog posts by Ahmad Reinaldi covering automation, AI, workflow design, and Industry 4.0 topics.">
+    <meta name="keywords" content="automation, AI, workflow, Industry 4.0, blog, Ahmad Reinaldi">
+    <meta name="author" content="Ahmad Reinaldi">
+
+    <!-- External Libraries -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-    <style type="text/tailwindcss">
-        :root {
-            --primary-color: #F7FF00;
-            --secondary-color: #4ADE80;
-            --dark-color: #111827;
-            --light-color: #F9FAFB;
-        }
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: var(--light-color);
-            color: var(--dark-color);
-        }
-        .neobrutalist-border {
-            border: 2px solid var(--dark-color);
-            box-shadow: 4px 4px 0px var(--dark-color);
-        }
-        .neobrutalist-button {
-            border: 2px solid var(--dark-color);
-            box-shadow: 4px 4px 0px var(--dark-color);
-            transition: all 0.2s ease-in-out;
-        }
-        .neobrutalist-button:hover {
-            box-shadow: 2px 2px 0px var(--dark-color);
-            transform: translate(2px, 2px);
-        }
-        .grid-lines {
-            background-image:
-                linear-gradient(to right, #e5e7eb 1px, transparent 1px),
-                linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+    <!-- Local Assets -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="../assets/js/scripts.js"></script>
 </head>
 <body class="bg-[var(--light-color)] text-[var(--dark-color)]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid-lines">
+        <!-- Header Section -->
         <header class="flex justify-between items-center py-6 border-b-2 border-black">
-            <h1 class="text-2xl font-bold uppercase">GRAGIH<br/>PROJECTS.</h1>
+            <h1 class="text-2xl font-bold uppercase">GRAGIH<br>PROJECTS.</h1>
             <nav class="hidden md:flex items-center space-x-6 font-bold">
                 <a class="hover:text-[var(--secondary-color)]" href="../index.html">Home</a>
                 <a class="hover:text-[var(--secondary-color)]" href="../index.html#about">About</a>
@@ -60,75 +39,89 @@
             </button>
         </header>
 
-        <main class="py-16">
-            <div class="text-center mb-12">
-                <h2 class="text-5xl font-bold uppercase tracking-tighter mb-4">All Blog Posts</h2>
-                <p class="mt-4 text-lg max-w-2xl mx-auto">Ongoing experiments, lessons, and thoughts on automation, AI, and workflow design. Best practices for learning and implementation too!</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white neobrutalist-border overflow-hidden">
-                    <img alt="Blog post image about n8n workflow" class="w-full h-48 object-cover border-b-2 border-black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB16ajwV6C3n1xgXpWCQ0ezD5lJ5Do0ysxw-9Bj3gd-HfyCVxQOisgp--EmGeLCBtieRDXa-l2MFSVF0DOFVfU-UiH7L1MlP2WpY-1EBm7M_YMAnL189lZpSvqaTbx76w7MpOo1JvFPjsHG-yP0NY0SHIbfG3zPr3kDsGH70oPrWGlvg_pWMntsYETnXaWm8DfDmeD7gkXO5NT7OpwG61e1wiNRbbHLs244K5XXj00ssrqCo5aH01T2DMBBm0c7qWYsLBgzqJoVBZo"/>
-                    <div class="p-6">
-                        <span class="text-sm font-bold text-gray-500">SEPTEMBER 12, 2023</span>
-                        <h4 class="font-bold text-lg mt-2 mb-2">Building a Powerful Automation Workflow with n8n</h4>
-                        <p class="text-sm text-gray-600 mb-4">A step-by-step guide to creating your first n8n workflow, integrating multiple apps, and automating repetitive tasks to boost your productivity.</p>
-                        <a class="font-bold text-[var(--secondary-color)] hover:underline" href="n8n-automation-workflow.html">Read More</a>
+                <!-- Main Content -->
+                <main class="py-16">
+                    <div class="text-center mb-12">
+                        <h2 class="text-5xl font-bold uppercase tracking-tighter mb-4">All Blog Posts</h2>
+                        <p class="mt-4 text-lg max-w-2xl mx-auto">
+                            Ongoing experiments, lessons, and thoughts on automation, AI, and workflow design.
+                            Best practices for learning and implementation too!
+                        </p>
                     </div>
-                </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="bg-white neobrutalist-border overflow-hidden">
+                                <img alt="Blog post image about n8n workflow"
+                                     class="w-full h-48 object-cover border-b-2 border-black"
+                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuB16ajwV6C3n1xgXpWCQ0ezD5lJ5Do0ysxw-9Bj3gd-HfyCVxQOisgp--EmGeLCBtieRDXa-l2MFSVF0DOFVfU-UiH7L1MlP2WpY-1EBm7M_YMAnL189lZpSvqaTbx76w7MpOo1JvFPjsHG-yP0NY0SHIbfG3zPr3kDsGH70oPrWGlvg_pWMntsYETnXaWm8DfDmeD7gkXO5NT7OpwG61e1wiNRbbHLs244K5XXj00ssrqCo5aH01T2DMBBm0c7qWYsLBgzqJoVBZo">
+                                <div class="p-6">
+                                    <span class="text-sm font-bold text-gray-500">SEPTEMBER 12, 2025</span>
+                                    <h4 class="font-bold text-lg mt-2 mb-2">Building a Powerful Automation Workflow with n8n</h4>
+                                    <p class="text-sm text-gray-600 mb-4">
+                                        A step-by-step guide to creating your first n8n workflow, integrating multiple apps,
+                                        and automating repetitive tasks to boost your productivity.
+                                    </p>
+                                    <a class="font-bold text-[var(--secondary-color)] hover:underline" href="n8n-automation-workflow.html">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
                 <div class="bg-white neobrutalist-border overflow-hidden">
                     <img alt="Blog post image about AI in manufacturing" class="w-full h-48 object-cover border-b-2 border-black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBMFZ8prA_zWFyoCeNqrc6wmzaoz1sHx-aW9IlcBvi0dAApZG53nZcvB3ga76pZj3yd3jvlnYkv6tVqtuhR63SHM7fYFUczhB6VxjTX0FNmi3Xo5RgBknpLPEi9L4sLk_STsg8zVPNt8HuIjS4_aM2w2X9KDFdeAInztC68c0I-SavPaaYBbMikF_EFgRKSURL6VWrQzbPNVxZvPKZ2nLR76PzYFE7VLtBp8r4t5pDsOviFFonkunp3aT_yvoZ1hXI6lm2Mo9ZHtI"/>
                     <div class="p-6">
-                        <span class="text-sm font-bold text-gray-500">AUGUST 25, 2023</span>
+                        <span class="text-sm font-bold text-gray-500">AUGUST 25, 2025</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">The Future of AI in Manufacturing</h4>
                         <p class="text-sm text-gray-600 mb-4">Exploring how AI and machine learning are revolutionizing the manufacturing industry, from predictive maintenance to quality control.</p>
-                        <a class="font-bold text-[var(--secondary-color)] hover:underline" href="#">Read More</a>
+                        <a class="font-bold text-[var(--secondary-color)] hover:underline" href="future-ai-manufacturing.html">Read More</a>
                     </div>
                 </div>
                 <div class="bg-white neobrutalist-border overflow-hidden">
                     <img alt="Blog post image about no-code tools" class="w-full h-48 object-cover border-b-2 border-black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXlsKRsf9lvm0pjXARupzHQDJJOceTWAJN-79XJWzYEmDIgR4YHW4NTen8f8S9X1-TDHdvbQ0CSjpyUSMYNAwGMbJVdxWuKJRfTocYOZugBJmetvyIlj9PkdyDwiKkMuPDCgzOcoN3rHeS-0mDZWqLICEFswvLsrphbYLogXKjUUt6i3tUdbGGwNYvoymHAIwM4A1zadj6xS1DlNPRiqn-3ra-6tHuLhVUQuODLIZTL53Pak99mYurT4en-3up2-mcW4EkbDwTbUQ"/>
                     <div class="p-6">
-                        <span class="text-sm font-bold text-gray-500">JULY 30, 2023</span>
+                        <span class="text-sm font-bold text-gray-500">JULY 30, 2025</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">My Favorite No-Code Tools for Rapid Prototyping</h4>
                         <p class="text-sm text-gray-600 mb-4">A curated list of the best no-code platforms that help me build and test ideas quickly without writing a single line of code.</p>
-                        <a class="font-bold text-[var(--secondary-color)] hover:underline" href="#">Read More</a>
+                        <a class="font-bold text-[var(--secondary-color)] hover:underline" href="no-code-tools-prototyping.html">Read More</a>
                     </div>
                 </div>
                 <div class="bg-white neobrutalist-border overflow-hidden">
                     <img alt="Blog post image about data storytelling" class="w-full h-48 object-cover border-b-2 border-black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZjT3oD5Jz_FkK8v1gW9w-z-m4g3LgY_gX_d7hXv_c_q-hPjD_hW0kY-n_lM9wX-t-nZ_x_qPjO9lY-o-vH_jYkPzZ-gN_zY_v_eH8jU_eR_sA_k_iN_x_zX_sC_a_hYwL_v_aZ_fA-k_o-jN-gY-l_eB_sP_aO_lE_y_z_d_aH_n_oR_tH-eU_bI_iC_jO_uT_sH_aN_d_i-nE-r_sG_aT-e-l-lI-n-g-i_aR_t_aC-h-o-l_e_i-n-a-v_aG-e-n-t_aL_eS-s_iO_n-s-a_n-d-b_e-sT_pR_aC_tI_cE_s"/>
                     <div class="p-6">
-                        <span class="text-sm font-bold text-gray-500">JUNE 15, 2023</span>
+                        <span class="text-sm font-bold text-gray-500">JUNE 15, 2025</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">The Art of Data Storytelling</h4>
                         <p class="text-sm text-gray-600 mb-4">Learn how to transform raw data into compelling narratives that drive action and influence decisions. It's not just about charts; it's about the story.</p>
-                        <a class="font-bold text-[var(--secondary-color)] hover:underline" href="#">Read More</a>
+                        <a class="font-bold text-[var(--secondary-color)] hover:underline" href="data-storytelling.html">Read More</a>
                     </div>
                 </div>
                 <div class="bg-white neobrutalist-border overflow-hidden">
                     <img alt="Blog post image about ethical AI" class="w-full h-48 object-cover border-b-2 border-black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD_R_y_o_j_w_x_g_e_n_e_r_a_t_i_v_e_-_a_i_-_p_i_c_t_u_r_e_-_o_f_-_a_-_b_r_a_i_n_-_m_a_d_e_-_o_f_-_c_i_r_c_u_i_t_s_-_w_i_t_h_-_a_-_g_l_o_w_i_n_g_-_h_e_a_r_t_-_i_n_-_t_h_e_-_c_e_n_t_e_r_-_s_y_m_b_o_l_i_z_i_n_g_-_e_t_h_i_c_a_l_-_a_i"/>
                     <div class="p-6">
-                        <span class="text-sm font-bold text-gray-500">MAY 20, 2023</span>
+                        <span class="text-sm font-bold text-gray-500">MAY 20, 2025</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Navigating the Ethics of AI</h4>
                         <p class="text-sm text-gray-600 mb-4">As AI becomes more powerful, the ethical considerations become more complex. A discussion on bias, fairness, and transparency in AI systems.</p>
-                        <a class="font-bold text-[var(--secondary-color)] hover:underline" href="#">Read More</a>
+                        <a class="font-bold text-[var(--secondary-color)] hover:underline" href="ethical-ai.html">Read More</a>
                     </div>
                 </div>
                 <div class="bg-white neobrutalist-border overflow-hidden">
                     <img alt="Blog post image about workflow optimization" class="w-full h-48 object-cover border-b-2 border-black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkY-oT-p_p_i_n_g_-_a_-_c_o_m_p_l_e_x_-_w_o_r_k_f_l_o_w_-_d_i_a_g_r_a_m_-_o_n_-_a_-_w_h_i_t_e_b_o_a_r_d_-_w_i_t_h_-_a_r_r_o_w_s_-_a_n_d_-_n_o_t_e_s_-_s_h_o_w_i_n_g_-_i_m_p_r_o_v_e_m_e_n_t_s_-_a_n_d_-_o_p_t_i_m_i_z_a_t_i_o_n"/>
                     <div class="p-6">
-                        <span class="text-sm font-bold text-gray-500">APRIL 18, 2023</span>
+                        <span class="text-sm font-bold text-gray-500">APRIL 18, 2025</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">5 Simple Tricks for Workflow Optimization</h4>
                         <p class="text-sm text-gray-600 mb-4">Practical tips and tricks that you can implement today to streamline your personal and professional workflows for maximum efficiency.</p>
-                        <a class="font-bold text-[var(--secondary-color)] hover:underline" href="#">Read More</a>
+                        <a class="font-bold text-[var(--secondary-color)] hover:underline" href="workflow-optimization.html">Read More</a>
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center mt-16">
-                <a class="bg-[var(--dark-color)] text-white px-8 py-4 font-bold neobrutalist-button" href="#">Load More</a>
-            </div>
-        </main>
-
-        <footer>
-            <p class="font-bold">Designed by Ahmad Reinaldi | Copyright © 2025</p>
-        </footer>
-    </div>
-</body>
-</html>
+                            <div class="flex justify-center mt-16">
+                                <a class="bg-[var(--dark-color)] text-white px-8 py-4 font-bold neobrutalist-button" href="#">
+                                    Load More
+                                </a>
+                            </div>
+                        </main>
+            
+                        <!-- Footer -->
+                        <footer class="bg-[var(--dark-color)] text-white text-center py-4 my-8">
+                            <p class="font-bold">Designed by Ahmad Reinaldi | Copyright © 2025</p>
+                        </footer>
+                    </div>
+                </body>
+            </html>

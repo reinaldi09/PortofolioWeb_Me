@@ -1,105 +1,60 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Blog Post - Building a Powerful Automation Workflow with n8n</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<style type="text/tailwindcss">
-        :root {
-            --primary-color: #F7FF00;
-            --secondary-color: #4ADE80;
-            --dark-color: #111827;
-            --light-color: #F9FAFB;
-        }
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: var(--light-color);
-            color: var(--dark-color);
-        }
-        .neobrutalist-border {
-            border: 2px solid var(--dark-color);
-            box-shadow: 4px 4px 0px var(--dark-color);
-        }
-        .neobrutalist-button {
-            border: 2px solid var(--dark-color);
-            box-shadow: 4px 4px 0px var(--dark-color);
-            transition: all 0.2s ease-in-out;
-        }
-        .neobrutalist-button:hover {
-            box-shadow: 2px 2px 0px var(--dark-color);
-            transform: translate(2px, 2px);
-        }
-        .grid-lines {
-            background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-        .prose h2 {
-            font-size: 1.875rem;
-            font-weight: 700;
-            margin-top: 2em;
-            margin-bottom: 1em;
-        }
-        .prose p {
-            margin-bottom: 1.25em;
-            line-height: 1.7;
-        }
-        .prose img {
-            border: 2px solid var(--dark-color);
-            box-shadow: 4px 4px 0px var(--dark-color);
-            margin-top: 2em;
-            margin-bottom: 2em;
-        }
-        .prose pre {
-            background-color: var(--dark-color);
-            color: var(--light-color);
-            padding: 1.5em;
-            border-radius: 0;
-            border: 2px solid var(--dark-color);
-            box-shadow: 4px 4px 0px var(--dark-color);
-            overflow-x: auto;
-            margin-top: 2em;
-            margin-bottom: 2em;
-        }
-        .prose code {
-            font-family: 'Space Mono', monospace;
-        }
-    </style>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Powerful Automation Workflow with n8n - Ahmad Reinaldi</title>
+    <meta name="description" content="A step-by-step guide to creating your first n8n workflow, integrating multiple apps, and automating repetitive tasks to boost your productivity.">
+    <meta name="keywords" content="n8n, automation, workflow, productivity, API integration">
+    <meta name="author" content="Ahmad Reinaldi">
+
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+    <!-- Local Assets -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="../assets/js/scripts.js"></script>
 </head>
 <body class="bg-[var(--light-color)] text-[var(--dark-color)]">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 grid-lines">
-<header class="flex justify-between items-center py-6 border-b-2 border-black">
-<h1 class="text-2xl font-bold uppercase">GRAGIH<br/>PROJECTS.</h1>
-<nav class="hidden md:flex items-center space-x-6 font-bold">
-<a class="hover:text-[var(--secondary-color)]" href="#">Home</a>
-<a class="hover:text-[var(--secondary-color)]" href="#">About</a>
-<a class="hover:text-[var(--secondary-color)]" href="#">Services</a>
-<a class="hover:text-[var(--secondary-color)]" href="#">Work</a>
-<a class="bg-[var(--primary-color)] text-black px-6 py-2 neobrutalist-button flex items-center" href="#">
-<span class="mr-2">EN</span>
-<span class="material-symbols-outlined">sync_alt</span>
-<span class="ml-2">ID</span>
-</a>
-</nav>
-<button class="md:hidden">
-<span class="material-symbols-outlined text-4xl">menu</span>
-</button>
-</header>
-<main class="py-16">
-<div class="max-w-4xl mx-auto">
-<div class="mb-8">
-<a class="inline-flex items-center font-bold neobrutalist-button px-4 py-2 bg-white text-black hover:bg-gray-100" href="all_blog.html">
-<span class="material-symbols-outlined mr-2">arrow_back</span> Back to Blog Collection
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid-lines">
+        <!-- Header Section -->
+        <header class="flex justify-between items-center py-6 border-b-2 border-black">
+            <h1 class="text-2xl font-bold uppercase">GRAGIH<br>PROJECTS.</h1>
+            <nav class="hidden md:flex items-center space-x-6 font-bold">
+                <a class="hover:text-[var(--secondary-color)]" href="../index.html">Home</a>
+                <a class="hover:text-[var(--secondary-color)]" href="../index.html#about">About</a>
+                <a class="hover:text-[var(--secondary-color)]" href="../index.html#services">Services</a>
+                <a class="hover:text-[var(--secondary-color)]" href="../index.html#work">Work</a>
+                <a class="bg-[var(--primary-color)] text-black px-6 py-2 neobrutalist-button flex items-center" href="#">
+                    <span class="mr-2">EN</span>
+                    <span class="material-symbols-outlined">sync_alt</span>
+                    <span class="ml-2">ID</span>
+                </a>
+            </nav>
+            <button class="md:hidden">
+                <span class="material-symbols-outlined text-4xl">menu</span>
+            </button>
+        </header>
+        <!-- Main Content -->
+        <main class="py-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <a class="inline-flex items-center font-bold neobrutalist-button px-4 py-2 bg-white text-black hover:bg-gray-100"
+                       href="all_blog.html">
+                        <span class="material-symbols-outlined mr-2">arrow_back</span>
+                        Back to Blog Collection
                     </a>
-</div>
+                </div>
 <article class="bg-white p-8 sm:p-10 neobrutalist-border">
 <header class="mb-8 border-b-2 border-black pb-8">
 <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-tighter mb-4">Building a Powerful Automation Workflow with n8n</h2>
 <div class="flex items-center text-sm font-bold text-gray-500">
-<span>By Ahmad Reinaldi</span>
-<span class="mx-2">|</span>
-<span>SEPTEMBER 12, 2023</span>
+    <span>By Ahmad Reinaldi</span>
+    <span class="mx-2">|</span>
+    <span>SEPTEMBER 12, 2025</span>
 </div>
 </header>
 <div class="prose max-w-none text-lg">
@@ -130,15 +85,21 @@ const customerName = $json["body"]["name"];
 </div>
 </article>
 <div class="mt-12 flex justify-center">
-<a class="inline-flex items-center font-bold neobrutalist-button px-6 py-3 bg-[var(--primary-color)] text-black hover:bg-yellow-300" href="all_blog.html">
-<span class="material-symbols-outlined mr-2">arrow_back</span> Back to Blog Collection
-                    </a>
+    <a class="inline-flex items-center font-bold neobrutalist-button px-6 py-3 bg-[var(--primary-color)] text-black hover:bg-yellow-300"
+       href="all_blog.html">
+        <span class="material-symbols-outlined mr-2">arrow_back</span>
+        Back to Blog Collection
+    </a>
 </div>
 </div>
 </main>
-<footer class="bg-[var(--dark-color)] text-white text-center py-4 mt-8">
+
+<!-- Footer -->
+<footer class="bg-[var(--dark-color)] text-white text-center py-4 my-8">
 <p class="font-bold">Designed by Ahmad Reinaldi | Copyright © 2025</p>
 </footer>
 </div>
+</body>
+</html>
 
 </body></html>
