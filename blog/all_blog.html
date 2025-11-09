@@ -20,7 +20,7 @@
 <body class="bg-[var(--light-color)] text-[var(--dark-color)]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid-lines">
         <!-- Header Section -->
-        <header class="flex justify-between items-center py-6 border-b-2 border-black">
+        <header class="flex justify-between items-center py-6 border-b-2 border-black pl-4">
             <h1 class="text-2xl font-bold uppercase">GRAGIH<br>PROJECTS.</h1>
             <nav class="hidden md:flex items-center space-x-6 font-bold">
                 <a class="hover:text-[var(--secondary-color)]" href="../index.html">Home</a>
@@ -28,14 +28,22 @@
                 <a class="hover:text-[var(--secondary-color)]" href="../index.html#services">Services</a>
                 <a class="hover:text-[var(--secondary-color)]" href="../index.html#work">Work</a>
                 <a class="bg-[var(--primary-color)] text-black px-6 py-2 neobrutalist-button flex items-center" href="#">
-                    <span class="mr-2">EN</span>
-                    <span class="material-symbols-outlined">sync_alt</span>
-                    <span class="ml-2">ID</span>
+                    <span class="mr-2">CONTACT ME</span>
                 </a>
             </nav>
-            <button class="md:hidden menu-button" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+            <button class="md:hidden menu-button" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" type="button">
                 <span class="material-symbols-outlined text-4xl">menu</span>
             </button>
+            <!-- Mobile Navigation Menu -->
+            <nav class="mobile-nav-menu">
+                <a class="hover:text-[var(--secondary-color)]" href="../index.html">Home</a>
+                <a class="hover:text-[var(--secondary-color)]" href="../index.html#about">About</a>
+                <a class="hover:text-[var(--secondary-color)]" href="../index.html#services">Services</a>
+                <a class="hover:text-[var(--secondary-color)]" href="../index.html#work">Work</a>
+                <a class="bg-[var(--primary-color)] text-black px-6 py-2 neobrutalist-button flex items-center" href="#">
+                    <span class="mr-2">CONTACT ME</span>
+                </a>
+            </nav>
         </header>
 
                 <!-- Main Content -->

@@ -20,18 +20,30 @@
 <body class="bg-[var(--light-color)] text-[var(--dark-color)]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid-lines">
         <!-- Header Section -->
-        <header class="flex justify-between items-center py-6 border-b-2 border-black">
+        <header class="flex justify-between items-center py-6 border-b-2 border-black pl-4">
             <h1 class="text-2xl font-bold uppercase">GRAGIH<br>PROJECTS.</h1>
             <nav class="hidden md:flex items-center space-x-6 font-bold">
                 <a class="hover:text-[var(--secondary-color)]" href="#home">Home</a>
                 <a class="hover:text-[var(--secondary-color)]" href="#about">About</a>
                 <a class="hover:text-[var(--secondary-color)]" href="#services">Services</a>
                 <a class="hover:text-[var(--secondary-color)]" href="#work">Work</a>
+                <a class="hover:text-[var(--secondary-color)]" href="#products">Digital Product</a>
                 <a class="bg-[var(--primary-color)] text-black px-6 py-2 neobrutalist-button flex items-center" href="#contactme">
                     <span class="mr-2">CONTACT ME</span>
                 </a>
             </nav>
-            <button class="md:hidden menu-button" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+            <!-- Mobile Navigation Menu -->
+            <nav class="mobile-nav-menu">
+                <a class="hover:text-[var(--secondary-color)]" href="#home">Home</a>
+                <a class="hover:text-[var(--secondary-color)]" href="#about">About</a>
+                <a class="hover:text-[var(--secondary-color)]" href="#services">Services</a>
+                <a class="hover:text-[var(--secondary-color)]" href="#work">Work</a>
+                <a class="hover:text-[var(--secondary-color)]" href="#products">Digital Product</a>
+                <a class="bg-[var(--primary-color)] text-black px-6 py-2 neobrutalist-button flex items-center" href="#contactme">
+                    <span class="mr-2">CONTACT ME</span>
+                </a>
+            </nav>
+            <button class="md:hidden menu-button" id="mobile-menu-button" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" type="button" style="display: block !important; position: relative; z-index: 1001;">
                 <span class="material-symbols-outlined text-4xl">menu</span>
             </button>
         </header>
@@ -380,6 +392,80 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Digital Products Section -->
+        <section id="products" class="py-16 bg-white neobrutalist-border my-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold uppercase mb-4">My Digital Products</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">
+                    Explore my collection of digital tools and resources designed to help you work smarter,
+                    automate processes, and boost productivity.
+                    
+                    
+                </p>
+                <h2 class="text-4xl mx-auto font-bold uppercase mb-4">COMING SOON...!!!</h2>
+            </div>
+
+            <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="bg-[var(--primary-color)] neobrutalist-border overflow-hidden">
+                    <div class="p-8 text-center">
+                        <span class="material-symbols-outlined text-6xl mb-4 text-black">auto_awesome</span>
+                        <h3 class="font-bold text-xl mb-4 text-black">AI Automation Templates</h3>
+                        <p class="text-black mb-6">
+                            Ready-to-use n8n workflow templates for common automation tasks.
+                            Save hours of setup time with pre-configured integrations.
+                        </p>
+                        <a href="https://link.id/reinaldi09/automation-templates" target="_blank" rel="noopener noreferrer"
+                           class="bg-black text-white px-6 py-3 font-bold neobrutalist-button inline-flex items-center">
+                            Get Templates
+                            <span class="material-symbols-outlined ml-2">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-[var(--secondary-color)] neobrutalist-border overflow-hidden">
+                    <div class="p-8 text-center">
+                        <span class="material-symbols-outlined text-6xl mb-4 text-black">code</span>
+                        <h3 class="font-bold text-xl mb-4 text-black">No-Code Development Kit</h3>
+                        <p class="text-black mb-6">
+                            Complete toolkit with scripts, templates, and guides for rapid prototyping
+                            without writing complex code.
+                        </p>
+                        <a href="https://link.id/reinaldi09/no-code-kit" target="_blank" rel="noopener noreferrer"
+                           class="bg-black text-white px-6 py-3 font-bold neobrutalist-button inline-flex items-center">
+                            Get Toolkit
+                            <span class="material-symbols-outlined ml-2">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white neobrutalist-border overflow-hidden">
+                    <div class="p-8 text-center">
+                        <span class="material-symbols-outlined text-6xl mb-4 text-[var(--secondary-color)]">school</span>
+                        <h3 class="font-bold text-xl mb-4">Learning Resources</h3>
+                        <p class="text-gray-600 mb-6">
+                            Curated collection of tutorials, cheat sheets, and best practices
+                            for automation, AI, and industrial systems.
+                        </p>
+                        <a href="https://link.id/reinaldi09/learning-resources" target="_blank" rel="noopener noreferrer"
+                           class="bg-[var(--primary-color)] text-black px-6 py-3 font-bold neobrutalist-button inline-flex items-center">
+                            Access Resources
+                            <span class="material-symbols-outlined ml-2">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <p class="text-gray-600 mb-6">Want to see all my digital products in one place?</p>
+                <a href="https://link.id/reinaldi09" target="_blank" rel="noopener noreferrer"
+                   class="bg-[var(--dark-color)] text-white px-8 py-4 font-bold neobrutalist-button inline-flex items-center">
+                    Visit My Link.id Store
+                    <span class="material-symbols-outlined ml-2">store</span>
+                </a>
+            </div> -->
+            
         </section>
 
         <!-- Contact Section -->

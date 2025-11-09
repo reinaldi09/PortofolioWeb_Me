@@ -21,13 +21,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Example: Mobile menu toggle (if needed in the future)
+// Mobile menu toggle functionality
 function toggleMobileMenu() {
     const nav = document.querySelector('nav');
     if (nav) {
         nav.classList.toggle('mobile-menu-open');
     }
 }
+
+// Close mobile menu when clicking on a link
+document.addEventListener('click', function(event) {
+    const mobileNav = document.querySelector('.mobile-nav-menu');
+    if (mobileNav && mobileNav.classList.contains('active')) {
+        // Check if clicked element is a nav link
+        if (event.target.closest('.mobile-nav-menu a')) {
+            mobileNav.classList.remove('active');
+        }
+    }
+});
 
 // Example: Tab functionality (if not using Alpine.js)
 function switchTab(tabName) {
@@ -58,21 +69,45 @@ function switchTab(tabName) {
 
 // Mobile menu toggle functionality
 function toggleMobileMenu() {
-    const nav = document.querySelector('nav');
-    if (nav) {
-        nav.classList.toggle('mobile-menu-open');
+    console.log('Mobile menu toggle called');
+    const mobileNav = document.querySelector('.mobile-nav-menu');
+    if (mobileNav) {
+        console.log('Found mobile nav element:', mobileNav);
+        const isOpen = mobileNav.classList.contains('active');
+        console.log('Menu currently open:', isOpen);
+
+        if (isOpen) {
+            mobileNav.classList.remove('active');
+            console.log('Mobile menu closed');
+        } else {
+            mobileNav.classList.add('active');
+            console.log('Mobile menu opened');
+        }
+
+        console.log('Mobile menu toggled, current classes:', mobileNav.className);
+        console.log('Mobile nav display style:', window.getComputedStyle(mobileNav).display);
+    } else {
+        console.log('Mobile nav menu not found');
+        // Try to find it with a different selector
+        const altMobileNav = document.querySelector('nav.mobile-nav-menu');
+        if (altMobileNav) {
+            console.log('Found with alt selector');
+            altMobileNav.classList.toggle('active');
+        } else {
+            console.log('No mobile nav found with any selector');
+        }
     }
 }
 
-// Close mobile menu when clicking outside or on a link
+// Close mobile menu when clicking outside
 document.addEventListener('click', function(event) {
-    const nav = document.querySelector('nav');
+    const mobileNav = document.querySelector('.mobile-nav-menu');
     const menuButton = document.querySelector('.menu-button');
 
-    if (nav && nav.classList.contains('mobile-menu-open')) {
-        // Close if clicking outside nav or on a nav link
-        if (!nav.contains(event.target) && event.target !== menuButton) {
-            nav.classList.remove('mobile-menu-open');
+    if (mobileNav && mobileNav.classList.contains('active')) {
+        // Close if clicking outside nav and not on menu button
+        if (!mobileNav.contains(event.target) && event.target !== menuButton && !menuButton.contains(event.target)) {
+            mobileNav.classList.remove('active');
         }
     }
 });
@@ -82,6 +117,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add any initialization code here
     console.log('Portfolio website loaded successfully');
 
+    // Log current screen width
+    const screenWidth = window.innerWidth;
+    console.log('Current screen width:', screenWidth + 'px');
+
+    // Check if hamburger button should be visible
+    const menuButton = document.querySelector('.menu-button');
+    if (menuButton) {
+        const computedStyle = window.getComputedStyle(menuButton);
+        console.log('Menu button display style:', computedStyle.display);
+        console.log('Menu button visibility:', computedStyle.visibility);
+    } else {
+        console.log('Menu button not found');
+    }
+
     // Add viewport meta tag if missing (for better mobile support)
     if (!document.querySelector('meta[name="viewport"]')) {
         const viewport = document.createElement('meta');
@@ -89,4 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         viewport.content = 'width=device-width, initial-scale=1.0';
         document.head.appendChild(viewport);
     }
+
+    // Initialize mobile menu button - direct inline onclick is used instead
+    console.log('Mobile menu initialization complete');
 });
