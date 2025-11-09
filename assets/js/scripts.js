@@ -1,16 +1,22 @@
 // Alpine.js is loaded via CDN, so we don't need to include it here
 // This file can be used for additional custom JavaScript functionality
 
-// Example: Smooth scrolling for anchor links
+// Smooth scrolling for anchor links (only for same-page links)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        const href = this.getAttribute('href');
+
+        // Only prevent default and handle smooth scroll for same-page anchors
+        // Skip if href is just "#" or external links
+        if (href && href !== '#' && href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
     });
 });
@@ -50,8 +56,37 @@ function switchTab(tabName) {
     }
 }
 
+// Mobile menu toggle functionality
+function toggleMobileMenu() {
+    const nav = document.querySelector('nav');
+    if (nav) {
+        nav.classList.toggle('mobile-menu-open');
+    }
+}
+
+// Close mobile menu when clicking outside or on a link
+document.addEventListener('click', function(event) {
+    const nav = document.querySelector('nav');
+    const menuButton = document.querySelector('.menu-button');
+
+    if (nav && nav.classList.contains('mobile-menu-open')) {
+        // Close if clicking outside nav or on a nav link
+        if (!nav.contains(event.target) && event.target !== menuButton) {
+            nav.classList.remove('mobile-menu-open');
+        }
+    }
+});
+
 // Initialize any functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Add any initialization code here
     console.log('Portfolio website loaded successfully');
+
+    // Add viewport meta tag if missing (for better mobile support)
+    if (!document.querySelector('meta[name="viewport"]')) {
+        const viewport = document.createElement('meta');
+        viewport.name = 'viewport';
+        viewport.content = 'width=device-width, initial-scale=1.0';
+        document.head.appendChild(viewport);
+    }
 });
