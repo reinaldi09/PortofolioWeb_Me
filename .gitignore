@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Local Backups & Scratch
+_backup/
+*.bak
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.log
+
