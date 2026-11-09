@@ -1,5 +1,5 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://reinaldi09.github.io/PortofolioWeb_Me/sitemap.xml
+Sitemap: https://reinaldi.gragih.my.id/sitemap.xml
 
